@@ -1,0 +1,9 @@
+{
+    "[python]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.formatOnSave": true,
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black"
+}
