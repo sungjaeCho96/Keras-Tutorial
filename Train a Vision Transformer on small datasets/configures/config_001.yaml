@@ -1,0 +1,23 @@
+# DATA
+buffer_size: 512
+batch_size: 256
+
+# AUGMENTATION
+image_size: 72
+patch_size: 6
+
+# OPTIMIZER
+lr: 0.001
+weight_decay: 0.0001
+
+# TRAINING
+epochs: 50
+
+# ARCHITECTURE
+layer_norm_eps: 1.0E-6
+transformer_layers: 8
+projection_dim: 64
+num_heads: 4
+mlp_head_units: 
+    - 2048
+    - 1024
