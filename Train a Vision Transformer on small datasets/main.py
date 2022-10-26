@@ -1,9 +1,6 @@
-import math
-import numpy as np
+from cgi import test
 import tensorflow as tf
 from tensorflow import keras
-import tensorflow_addons as tfa
-import matplotlib.pyplot as plt
 from dataset.dataset_util import get_dataset_fn
 from dataset.augmentation import get_augmentation_layers
 
@@ -25,3 +22,9 @@ input_shape = x_train.shape
 
 augmentation_layers = get_augmentation_layers(input_shape[0])
 augmentation_layers.layers[0].adapt(x_train)
+
+
+if __name__ == "__main__":
+    from test.test_patch import test_fn
+    test_fn()
+    
