@@ -1,21 +1,22 @@
 import tensorflow as tf
+
 from tensorflow.keras import layers
-
-# from tensorflow.python.keras import layers
-
+from utils.config_parser import Configure
 
 MODES = ["left-up", "left-down", "right-up", "right-down"]
+
+config = Configure()
 
 
 class ShiftedPatchTokenization(layers.Layer):
     def __init__(
         self,
-        image_size,
-        patch_size,
-        num_patches,
-        projection_dim,
+        image_size=config.image_size,
+        patch_size=config.patch_size,
+        num_patches=config.num_patches,
+        projection_dim=config.projection_dim,
+        epsilon=config.layer_norm_eps,
         vanilla=False,
-        epsilon=1e06,
         **kwargs,
     ):
         super().__init__(**kwargs)
@@ -106,7 +107,12 @@ class ShiftedPatchTokenization(layers.Layer):
 
 
 class PatchEncoder(layers.Layer):
-    def __init__(self, num_patches, projection_dim, **kwargs):
+    def __init__(
+        self,
+        num_patches=config.num_patches,
+        projection_dim=config.projection_dim,
+        **kwargs,
+    ):
         super().__init__(**kwargs)
         self.num_patches = num_patches
         self.position_embedding = layers.Embedding(

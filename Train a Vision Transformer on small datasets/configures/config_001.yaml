@@ -1,6 +1,6 @@
 # DATA
 buffer_size: 512
-batch_size: 256
+batch_size: 128
 
 # AUGMENTATION
 image_size: 72
