@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*$py.class
+
+# tensorboard
+tf_log/
+
+# venv
+keras_tutorial_venv/
+
+# Multiclass_semantic_segmentation_using_DeepLabV3P
+Multiclass_semantic_segmentation_using_DeepLabV3P/.vscode/*
+Multiclass_semantic_segmentation_using_DeepLabV3P/datasets/instance-level-human-parsing/*
